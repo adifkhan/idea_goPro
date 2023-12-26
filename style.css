@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #060611;
+  text-align: center;
+  color: white;
+  padding: 2rem 8rem;
+}
+
+.brand_logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.brand_logo h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: "Lobster", cursive;
+  background-image: linear-gradient(
+    to left,
+    #fa00ff,
+    #cd46ff,
+    #9d5dff,
+    #666bff,
+    #0072ff
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.navbarbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.navbar a:hover {
+  background-image: linear-gradient(
+    to left,
+    #fa00ff,
+    #cd46ff,
+    #9d5dff,
+    #666bff,
+    #0072ff
+  );
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-image: linear-gradient(to right, #0072ff, #cd46ff) 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.navbar li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, #0072ff, #cd46ff) 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.navbar li a:hover::before {
+  transform: scaleY(1.3);
+  opacity: 1;
+  left: 10px;
+}
+
+.navbar li a:hover::after {
+  transform: scaleY(1.3);
+  opacity: 1;
+  left: -10px;
+}
+
+.dropdown-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  background: none;
+  color: white;
+}
+
+.user_section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.user_section .user_button {
+  cursor: pointer;
+}
+
+.user_section button {
+  color: aliceblue;
+  font-size: 1.4rem;
+  border: solid 2px transparent;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(to right top, #fa00ff, #cd46ff, #9d5dff, #666bff, #0072ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  /* box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5); */
+  box-shadow: 2px 1000px 1px #0a0a0a inset;
+  cursor: pointer;
+}
+
+.user_section button:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(to left bottom, #fa00ff, #cd46ff, #9d5dff, #666bff, #0072ff);
+}
+
+/******************** Responsive Styles  *******************/
+@media only screen and (max-width: 768px) {
+}
