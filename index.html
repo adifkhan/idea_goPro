@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>!dea goPro</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- boxicons font-icon link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="brand_logo">
-        <box-icon name="podcast" color="#0072ff" size="lg"></box-icon>
-        <h2>!dea goPro</h2>
+      <div class="menu_section">
+        <i class="bx bx-menu bx-lg" id="menu_dropdown"></i>
+        <div class="brand_logo">
+          <box-icon name="podcast" color="#0072ff" size="lg"></box-icon>
+          <h2>!dea goPro</h2>
+        </div>
       </div>
       <nav class="navbar">
-        <button class="dropdown-btn">&#9776; Menu</button>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -42,6 +50,35 @@
         ></box-icon>
         <button>Sign Up</button>
       </div>
+      <!-- mini navbar  -->
+      <nav class="mini_navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="mini_user_section">
+          <box-icon
+            class="user_button"
+            type="solid"
+            name="heart"
+            color="#fff"
+            animation="tada-hover"
+            size="md"
+          ></box-icon>
+          <box-icon
+            class="user_button"
+            type="solid"
+            name="cart"
+            color="#fff"
+            animation="tada-hover"
+            size="md"
+          ></box-icon>
+          <button>Sign Up</button>
+        </div>
+      </nav>
     </header>
     <script src="./script.js"></script>
   </body>

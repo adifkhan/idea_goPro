@@ -1,8 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdownButton = document.querySelector(".dropdown-btn");
-  const navList = document.querySelector("nav ul");
+/* ========== toggle icon navbar ==============  */
+let menuIcon = document.querySelector("#menu_dropdown");
+let navbar = document.querySelector(".mini_navbar");
 
-  dropdownButton.addEventListener("click", function () {
-    navList.classList.toggle("show");
-  });
-});
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active_navbar");
+  console.log(menuIcon, navbar);
+};
