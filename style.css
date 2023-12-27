@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Lobster:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster:wght@100;300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +8,6 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -16,29 +15,32 @@ html {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1600px;
+  /* max-width: 1600px; */
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #060611;
+  background-color: #0a0a0a;
   text-align: center;
   color: white;
   padding: 2rem 8rem;
   position: sticky;
 }
+
 .menu_section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .brand_logo {
   display: flex;
   align-items: center;
@@ -61,6 +63,7 @@ header {
   background-clip: text;
   color: transparent;
 }
+
 #menu_dropdown {
   display: none;
   cursor: pointer;
@@ -69,16 +72,19 @@ header {
   background: none;
   color: white;
 }
+
 .mini_navbar {
   display: none;
   position: absolute;
   transition: 0.5s ease;
-  top: 75px;
+  top: 73px;
   left: -400px;
 }
+
 .active_navbar {
   left: 0;
 }
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -87,20 +93,21 @@ header {
   margin: 0;
   padding: 0;
 }
+
 .mini_navbar {
   display: flex;
   flex-direction: column;
   width: 350px;
   padding: 2rem;
-  background-color: #0ef;
+  background-color: #141414;
+  border-radius: 0 0 5px;
 }
+
 .mini_navbar ul {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
   list-style: none;
-  border-radius: 0 0 5px;
-  background-color: #0ef;
 }
 
 .navbar a,
@@ -171,16 +178,29 @@ header {
   left: -10px;
 }
 
+.mini_user_section,
 .user_section {
   display: flex;
   align-items: center;
   gap: 2.5rem;
 }
 
+.user_section {
+  position: relative;
+}
+
+.mini_user_section {
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #574747;
+}
+.mini_user_section .user_button,
 .user_section .user_button {
   cursor: pointer;
 }
 
+.mini_user_section button,
 .user_section button {
   color: aliceblue;
   font-size: 1.4rem;
@@ -198,13 +218,63 @@ header {
   box-shadow: 2px 1000px 1px #0a0a0a inset;
   cursor: pointer;
 }
-
+.mini_user_section button:hover,
 .user_section button:hover {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
     linear-gradient(to left bottom, #fa00ff, #cd46ff, #9d5dff, #666bff, #0072ff);
+}
+
+.search_box {
+  display: none;
+  position: absolute;
+  top: 59px;
+  right: 0;
+  height: 35px;
+  width: 350px;
+  background-color: #141414;
+  border-radius: 30px;
+}
+
+.active_search {
+  display: block;
+}
+
+.search input[type="text"] {
+  width: 100%;
+  height: 35px;
+  border-radius: 30px 0 0 30px;
+  color: white;
+  letter-spacing: 1px;
+  background: transparent;
+  padding: 3px 40px 3px 20px;
+  border: none;
+  outline: none;
+}
+.search_btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-30%, -50%);
+  cursor: pointer;
+}
+
+.home_section {
+  width: 100vw;
+  min-height: calc(100vh - 76px);
+  background-color: rgb(51, 39, 82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home_section h1 {
+  font-size: 2.5rem;
+  color: whitesmoke;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: "Lobster", cursive;
 }
 
 /******************** Responsive Styles  *******************/
@@ -221,6 +291,7 @@ header {
   .user_section {
     gap: 1.5rem;
   }
+  .mini_user_section button,
   .user_section button {
     padding: 5px 15px;
   }
@@ -245,5 +316,10 @@ header {
 @media only screen and (max-width: 480px) {
   header {
     padding: 2rem;
+  }
+  .mini_navbar {
+    width: 100%;
+
+    border-radius: 0 0 5px 5px;
   }
 }
