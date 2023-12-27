@@ -78,7 +78,7 @@ header {
   position: absolute;
   transition: 0.5s ease;
   top: 73px;
-  left: -400px;
+  left: -500px;
 }
 
 .active_navbar {
@@ -185,10 +185,6 @@ header {
   gap: 2.5rem;
 }
 
-.user_section {
-  position: relative;
-}
-
 .mini_user_section {
   justify-content: space-evenly;
   margin-top: 1rem;
@@ -216,6 +212,7 @@ header {
   background-clip: content-box, border-box;
   /* box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5); */
   box-shadow: 2px 1000px 1px #0a0a0a inset;
+  outline: none;
   cursor: pointer;
 }
 .mini_user_section button:hover,
@@ -230,33 +227,36 @@ header {
 .search_box {
   display: none;
   position: absolute;
-  top: 59px;
+  top: 75px;
   right: 0;
-  height: 35px;
-  width: 350px;
-  background-color: #141414;
-  border-radius: 30px;
+  height: 40px;
+  width: 100%;
+  padding: 4px 0;
+  background-color: #141414b6;
+  z-index: 20;
 }
 
 .active_search {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .search input[type="text"] {
-  width: 100%;
-  height: 35px;
-  border-radius: 30px 0 0 30px;
+  width: 400px;
+  height: 100%;
+  border-radius: 30px;
   color: white;
   letter-spacing: 1px;
-  background: transparent;
+  background: rgb(51, 39, 82);
   padding: 3px 40px 3px 20px;
+  margin-right: 8rem;
   border: none;
   outline: none;
 }
 .search_btn {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 8rem;
   transform: translate(-30%, -50%);
   cursor: pointer;
 }
@@ -295,6 +295,15 @@ header {
   .user_section button {
     padding: 5px 15px;
   }
+  .search_box {
+    top: 73px;
+  }
+  .search input[type="text"] {
+    margin-right: 3rem;
+  }
+  .search_btn {
+    right: 3rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   .menu_section {
@@ -321,5 +330,12 @@ header {
     width: 100%;
 
     border-radius: 0 0 5px 5px;
+  }
+  .search input[type="text"] {
+    width: 97vw;
+    margin-right: 0.5rem;
+  }
+  .search_btn {
+    right: 0.5rem;
   }
 }
